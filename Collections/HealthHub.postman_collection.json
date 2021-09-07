@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "22ff753d-cc74-4763-9b5e-536739f0544d",
+		"name": "HealthHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"therathna\",\r\n    \"password\": \"work2win\",\r\n    \"eid\": \"72919872345678\",\r\n    \"emailId\": \"test1@gmail.com\",\r\n    \"mobileNo\": \"123456\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"name\": \"Ratna Kumar v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Details By Eid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getByEid/72919872345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getByEid",
+								"72919872345678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Details By User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getByUserId/therathna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getByUserId",
+								"therathna"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EID Validation",
+			"item": [
+				{
+					"name": "Create EID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"eid\": \"7291984123456789\",\r\n    \"emailId\": \"test2@gmail.com\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"name\": \"Kumar v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Eid/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Eid",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EID Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/Eid/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Eid",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
