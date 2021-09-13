@@ -160,6 +160,137 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Report Uploads",
+			"item": [
+				{
+					"name": "FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Ratna/Desktop/MetLife.txt"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/file/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "File Download",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Ratna/Desktop/MetLife.txt"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/file/download/613fc91155c59b109a806a93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"file",
+								"download",
+								"613fc91155c59b109a806a93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eid\": \"7291984123456789\",\r\n    \"name\": \"test2@gmail.com\",\r\n    \"startDate\": \"2021-09-13\",\r\n    \"endDate\": \"2021-09-13\",\r\n    \"hospitalName\": \"NMC Hospital\",\r\n    \"doctorName\": \"Varshita\",\r\n    \"caseDesc\": \"General Flue infection\",\r\n    \"fileId\": \"613fc91155c59b109a806a93\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/report/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/report/getByEid/7291984123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"getByEid",
+								"7291984123456789"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

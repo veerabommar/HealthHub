@@ -10,7 +10,7 @@ import com.healthhub.registration.entity.Report;
 @Repository
 public interface ReportRepository extends MongoRepository<Report, String> {
 
-	Report findByEid (String eid);
+	List<Report> findByEid (String eid);
 	
 	List<Report> findByName(String name);
 }

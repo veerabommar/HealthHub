@@ -18,7 +18,7 @@ public class ReportService {
 		return reportRepository.save(report);
 	}
 
-	public Report getByEid(String eid) {
+	public List<Report> getByEid(String eid) {
 		return reportRepository.findByEid(eid);
 	}
 

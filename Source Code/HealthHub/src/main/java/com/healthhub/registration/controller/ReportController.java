@@ -25,8 +25,8 @@ public class ReportController {
 		return reportService.createReport(report);
 	}
 
-	@GetMapping("/getByReport/{eid}")
-	public Report getByReport(@PathVariable String eid) {
+	@GetMapping("/getByEid/{eid}")
+	public List<Report> getByReport(@PathVariable String eid) {
 		return reportService.getByEid(eid);
 	}
 
