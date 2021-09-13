@@ -14,7 +14,7 @@ import com.healthhub.registration.entity.Report;
 import com.healthhub.registration.service.ReportService;
 
 @RestController
-@RequestMapping("/api/Report")
+@RequestMapping("/api/report")
 public class ReportController {
 
 	@Autowired
@@ -27,7 +27,7 @@ public class ReportController {
 
 	@GetMapping("/getByReport/{eid}")
 	public Report getByReport(@PathVariable String eid) {
-		return reportService.getByEId(eid);
+		return reportService.getByEid(eid);
 	}
 
 	@GetMapping("/getByName/{name}")

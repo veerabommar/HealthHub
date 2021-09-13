@@ -12,21 +12,21 @@ import com.healthhub.repository.ReportRepository;
 public class ReportService {
 
 	@Autowired
-	ReportRepository reportService;
+	ReportRepository reportRepository;
 
 	public Report createReport(Report report) {
-		return reportService.save(report);
+		return reportRepository.save(report);
 	}
 
-	public Report getByEId(String report) {
-		return reportService.findByEId(report);
+	public Report getByEid(String eid) {
+		return reportRepository.findByEid(eid);
 	}
 
 	public List<Report> getByName (String name) {
-		return reportService.findByName(name);
+		return reportRepository.findByName(name);
 	}	
 	
 	public List<Report> getAllReports() {
-		return reportService.findAll();
+		return reportRepository.findAll();
 	}
 }
