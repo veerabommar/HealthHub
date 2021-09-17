@@ -1,13 +1,13 @@
-package com.healthhub.registration.entity;
+package com.healthhub.file.entity;
 
-public class LoadFile {
+public class File {
 
     private String filename;
     private String fileType;
     private String fileSize;
     private byte[] file;
 
-    public LoadFile() {
+    public File() {
     }
 
     public String getFilename() {

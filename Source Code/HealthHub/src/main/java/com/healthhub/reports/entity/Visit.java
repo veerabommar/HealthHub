@@ -1,13 +1,13 @@
-package com.healthhub.registration.entity;
+package com.healthhub.reports.entity;
 
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "report")
-public class Report {	
-	
+@Document(collection = "visit")
+public class Visit {
+
 	public String getId() {
 		return id;
 	}
@@ -20,23 +20,17 @@ public class Report {
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
-	public String getName() {
-		return name;
+	public String getUserID() {
+		return userID;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserID(String userID) {
+		this.userID = userID;
 	}
-	public Date getStartDate() {
-		return startDate;
+	public Date getDate() {
+		return date;
 	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-	public Date getEndDate() {
-		return endDate;
-	}
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 	public String getHospitalName() {
 		return hospitalName;
@@ -56,22 +50,13 @@ public class Report {
 	public void setCaseDesc(String caseDesc) {
 		this.caseDesc = caseDesc;
 	}
-	public String getFileId() {
-		return fileId;
-	}
-	public void setFileId(String fileId) {
-		this.fileId = fileId;
-	}
-	
+
 	@Id
-	private String id;
+	private String id;	
 	private String eid;
-	private String name;
-	private Date startDate;
-	private Date endDate;
+	private String userID;
+	private Date date;
 	private String hospitalName;
 	private String doctorName;
 	private String caseDesc;
-	private String fileId;
-
 }

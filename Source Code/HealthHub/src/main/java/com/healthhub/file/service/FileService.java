@@ -1,4 +1,4 @@
-package com.healthhub.registration.service;
+package com.healthhub.file.service;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.healthhub.registration.entity.LoadFile;
+import com.healthhub.file.entity.File;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.client.gridfs.model.GridFSFile;
@@ -33,11 +33,11 @@ public class FileService {
         return fileID.toString();
     }
 
-    public LoadFile downloadFile(String id) throws IOException {
+    public File downloadFile(String id) throws IOException {
 
         GridFSFile gridFSFile = template.findOne( new Query(Criteria.where("_id").is(id)) );
 
-        LoadFile loadFile = new LoadFile();
+        File loadFile = new File();
 
         if (gridFSFile != null && gridFSFile.getMetadata() != null) {
         	

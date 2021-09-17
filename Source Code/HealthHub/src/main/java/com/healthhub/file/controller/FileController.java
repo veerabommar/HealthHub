@@ -1,4 +1,4 @@
-package com.healthhub.registration.controller;
+package com.healthhub.file.controller;
 
 
 import java.io.IOException;
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.healthhub.registration.entity.LoadFile;
-import com.healthhub.registration.service.FileService;
+import com.healthhub.file.entity.File;
+import com.healthhub.file.service.FileService;
 
 @RestController
 @CrossOrigin("*")
@@ -36,7 +36,7 @@ public class FileController {
 
     @GetMapping("/download/{id}")
     public ResponseEntity<ByteArrayResource> download(@PathVariable String id) throws IOException {
-        LoadFile loadFile = fileService.downloadFile(id);
+        File loadFile = fileService.downloadFile(id);
 
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(loadFile.getFileType() ))

@@ -22,8 +22,12 @@ public class UserService {
 		return userRepository.findByEid(eid);
 	}
 
-	public User getUserId (String userId) {
+	public User getUserId(String userId) {
 		return userRepository.findByUserId(userId);
+	}
+	
+	public User getUserIdAndPassword(String userId, String password) {
+		return userRepository.findByUserIdAndPassword(userId,password);
 	}
 
 	public List<User> getAllUsers() {

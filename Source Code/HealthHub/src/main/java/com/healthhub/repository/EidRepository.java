@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.healthhub.registration.entity.Eid;
+import com.healthhub.eid.entity.EidEntity;
 
 @Repository
-public interface EidRepository extends MongoRepository<Eid, String> {
-
-	Eid findByEid (String Eid);
+public interface EidRepository extends MongoRepository<EidEntity, String> {
 	
-	List<Eid> findByName(String name);
+	EidEntity findByEid(String eid);
 
-	List<Eid> findByMobileNo (String userId);	
+	List<EidEntity> findByFirstName(String firstName);
+	
+	List<EidEntity> findByMobileNo (String userId);	
 }
