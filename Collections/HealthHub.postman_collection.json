@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\": \"therathna\",\r\n    \"password\": \"work2win\",\r\n    \"eid\": \"72919872345678\",\r\n    \"emailId\": \"test1@gmail.com\",\r\n    \"mobileNo\": \"123456\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"name\": \"Ratna Kumar v\"\r\n}",
+							"raw": "{\r\n    \"userId\": \"therathna\",\r\n    \"password\": \"work2win\",\r\n    \"eid\": \"72919812345678\",\r\n    \"emailId\": \"test1@gmail.com\",\r\n    \"mobileNo\": \"123456\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"firstName\": \"Ratna Kumar\",\r\n    \"lastName\": \"Veerabomma1\",\r\n    \"nationlity\": \"Indian\",\r\n    \"gender\": \"male\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,12 +39,42 @@
 					"response": []
 				},
 				{
+					"name": "Validate Credentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"therathna\",\r\n    \"password\": \"work2win\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/validateUserId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"validateUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "User Details By Eid",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/user/getByEid/72919872345678",
+							"raw": "http://localhost:8080/api/user/getByEid/72919812345678",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -54,7 +84,7 @@
 								"api",
 								"user",
 								"getByEid",
-								"72919872345678"
+								"72919812345678"
 							]
 						}
 					},
@@ -115,7 +145,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"eid\": \"7291984123456789\",\r\n    \"emailId\": \"test2@gmail.com\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"name\": \"Kumar v\"\r\n}",
+							"raw": "{\r\n    \"eid\": \"72919812345678\",\r\n    \"emailId\": \"test1@gmail1.com\",\r\n    \"mobileNo\": \"123456\",\r\n    \"dateOfBirth\": \"12-Aug-2021\",\r\n    \"firstName\": \"Ratna Kumar\",\r\n    \"lastName\": \"Veerabomma1\",\r\n    \"nationlity\": \"Indian\",\r\n    \"gender\": \"male\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -123,7 +153,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/Eid/create",
+							"raw": "http://localhost:8080/api/eid/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -131,7 +161,7 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"Eid",
+								"eid",
 								"create"
 							]
 						}
@@ -139,12 +169,12 @@
 					"response": []
 				},
 				{
-					"name": "EID Details",
+					"name": "EID Details By Eid",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/Eid/all",
+							"raw": "http://localhost:8080/api/eid/getByEid/72919812345678",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -152,7 +182,129 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"Eid",
+								"eid",
+								"getByEid",
+								"72919812345678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All EID Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/eid/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"eid",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visit",
+			"item": [
+				{
+					"name": "Create Visit Creattion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eid\": \"7291984123456789\",\r\n    \"userID\": \"therathna\",\r\n    \"date\": \"2021-09-13\",\r\n    \"hospitalName\": \"NMC Hospital\",\r\n    \"doctorName\": \"Varshita\",\r\n    \"caseDesc\": \"fever checkup\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/visit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"visit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Visit Details By UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/visit/getByUserID/therathna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"visit",
+								"getByUserID",
+								"therathna"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Visit Details By EID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/visit/getByEid/7291984123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"visit",
+								"getByEid",
+								"7291984123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Visit Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/visit/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"visit",
 								"all"
 							]
 						}
@@ -245,7 +397,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"eid\": \"7291984123456789\",\r\n    \"name\": \"test2@gmail.com\",\r\n    \"startDate\": \"2021-09-13\",\r\n    \"endDate\": \"2021-09-13\",\r\n    \"hospitalName\": \"NMC Hospital\",\r\n    \"doctorName\": \"Varshita\",\r\n    \"caseDesc\": \"General Flue infection\",\r\n    \"fileId\": \"613fc91155c59b109a806a93\"\r\n}",
+							"raw": "{\r\n    \"visitId\": \"61448d8c44e88c6aafc53b93\",\r\n    \"eid\": \"7291984123456789\",\r\n    \"vistiDate\": \"2021-09-13\",\r\n    \"uploadDate\": \"2021-09-17\",\r\n    \"reportName\": \"Medical Prescription\",\r\n    \"reportDesc\": \"Sacn Report\",\r\n    \"fileId\": \"613fc91155c59b109a806a93\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,12 +421,12 @@
 					"response": []
 				},
 				{
-					"name": "Get Report",
+					"name": "Get Report By VisitID",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/report/getByEid/7291984123456789",
+							"raw": "http://localhost:8080/api/report/getByVisitId/61448d8c44e88c6aafc53b93",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -283,8 +435,30 @@
 							"path": [
 								"api",
 								"report",
-								"getByEid",
-								"7291984123456789"
+								"getByVisitId",
+								"61448d8c44e88c6aafc53b93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report By Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/report/getByVisitDate/2021-09-13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"getByVisitDate",
+								"2021-09-13"
 							]
 						}
 					},
