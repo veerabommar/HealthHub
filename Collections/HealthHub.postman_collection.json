@@ -136,6 +136,92 @@
 			]
 		},
 		{
+			"name": "Hospital User",
+			"item": [
+				{
+					"name": "Create New Hospital User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalId\": \"Aster321\",\r\n    \"password\": \"work2win321\",\r\n    \"hospitalName\": \"AsterClinic\",\r\n    \"hospitalAddess\": \"BurDubai Branch, Dubai\",\r\n    \"mobileNo\": \"971 5888123456\",\r\n    \"contactNumber\": \"04234555\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hospitaluser/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hospitaluser",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Hospital Credentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalId\": \"Aster321\",\r\n    \"password\": \"work2win321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hospitaluser/validateUserId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hospitaluser",
+								"validateUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Hospital User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hospitaluser/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hospitaluser",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "EID Validation",
 			"item": [
 				{

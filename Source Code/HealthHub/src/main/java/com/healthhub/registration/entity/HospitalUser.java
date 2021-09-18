@@ -5,12 +5,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "HospitalUser")
 public class HospitalUser {
-
-	public String getUserId() {
-		return userId;
+	
+	public String getHospitalId() {
+		return hospitalId;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setHospitalId(String hospitalId) {
+		this.hospitalId = hospitalId;
 	}
 	public String getPassword() {
 		return password;
@@ -44,7 +44,7 @@ public class HospitalUser {
 	}
 	
 	@Id
-	private String userId;
+	private String hospitalId;
 	private String password;
 	private String hospitalName;
 	private String hospitalAddess;
