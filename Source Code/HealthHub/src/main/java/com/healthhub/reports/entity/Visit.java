@@ -1,7 +1,5 @@
 package com.healthhub.reports.entity;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -26,10 +24,10 @@ public class Visit {
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getHospitalName() {
@@ -55,7 +53,7 @@ public class Visit {
 	private String id;	
 	private String eid;
 	private String userID;
-	private Date date;
+	private String date;
 	private String hospitalName;
 	private String doctorName;
 	private String caseDesc;

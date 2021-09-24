@@ -1,7 +1,5 @@
 package com.healthhub.reports.entity;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -26,16 +24,16 @@ public class Report {
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
-	public Date getVistiDate() {
+	public String getVistiDate() {
 		return vistiDate;
 	}
-	public void setVistiDate(Date vistiDate) {
+	public void setVistiDate(String vistiDate) {
 		this.vistiDate = vistiDate;
 	}
-	public Date getUploadDate() {
+	public String getUploadDate() {
 		return uploadDate;
 	}
-	public void setUploadDate(Date uploadDate) {
+	public void setUploadDate(String uploadDate) {
 		this.uploadDate = uploadDate;
 	}
 	public String getReportName() {
@@ -61,8 +59,8 @@ public class Report {
 	private String id;
 	private String visitId;
 	private String eid;
-	private Date vistiDate;
-	private Date uploadDate;
+	private String vistiDate;
+	private String uploadDate;
 	private String reportName;
 	private String reportDesc;
 	private String fileId;	
