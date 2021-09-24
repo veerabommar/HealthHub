@@ -42,8 +42,15 @@ public class Icu {
 	public void setNumOfBeds(String numOfBeds) {
 		this.numOfBeds = numOfBeds;
 	}	
-	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	@Id
+	private String id;
 	private String hospitalName;
 	private String address;
 	private String location;

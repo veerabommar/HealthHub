@@ -551,6 +551,101 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "ICU Details",
+			"item": [
+				{
+					"name": "Create ICU Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalName\": \"NMC Hospital\",\r\n    \"address\": \"17th Street\",\r\n    \"location\": \"Al Qusais First\",\r\n    \"icuType\": \"Medical Intensive Care\",\r\n    \"contact\": \"041111111\",\r\n    \"numOfBeds\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/icu/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"icu",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Icu Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalName\": \"NMC Hospital\",\r\n    \"location\": \"Al Qusais First\",\r\n    \"icuType\": \"ALL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/icu/GetIcuDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"icu",
+								"GetIcuDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalName\": \"ALL\",\r\n    \"location\": \"ALL\",\r\n    \"icuType\": \"ALL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/icu/GetIcuDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"icu",
+								"GetIcuDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
